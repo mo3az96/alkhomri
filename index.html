@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/fancybox.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/sal.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -250,16 +251,20 @@
       <img src="images/background/about.svg" class="pattern" />
       <div class="container">
         <div class="about-content">
-          <div class="about-head xs-head">
+          <div class="about-head xs-head" data-sal="slide-down">
             <img src="images/icons/title.svg" />
             <h3 class="about-title">نبذة عن <span>شركة الخمري</span></h3>
           </div>
           <div class="about-text">
-            <div class="about-head">
+            <div class="about-head" data-sal="slide-down">
               <img src="images/icons/title.svg" />
               <h3 class="about-title">نبذة عن <span>شركة الخمري</span></h3>
             </div>
-            <p class="about-summary">
+            <p
+              class="about-summary"
+              data-sal="slide-down"
+              style="--sal-delay: 0.2s"
+            >
               تعتبر شركة الخمري للفنادق والحج والعمرة واحدة من المؤسسات الجديرة
               بالثقة في هذا المجال منذ تأسيسها عام ‎٠4.0‏ ه- ‎١5/88‏ م بالمملكة
               العربية السعودية ‏ حيث أن المجموعة حاصلة على تصريح بخدمة المعتمرين
@@ -279,9 +284,18 @@
               تحقيق نتائج متميزة تمثلت صورها بتسهيل وراحة المعتمر من قدومه
               للمملكة العربية السعودية إلى مغادرته لبلاده .
             </p>
-            <a href="about.html" class="main-btn about-btn">مشاهدة المزيد</a>
+            <a
+              href="about.html"
+              class="main-btn about-btn"
+              data-sal="slide-down"
+              style="--sal-delay: 0.4s"
+              >مشاهدة المزيد</a
+            >
           </div>
-          <div class="about-imgs loading-img lazy-img-parent">
+          <div
+            class="about-imgs loading-img lazy-img-parent"
+            data-sal="zoom-in"
+          >
             <img data-src="images/about/1.jpg" class="about-img lazy-img" />
             <img data-src="images/about/logo.png" class="about-logo lazy-img" />
           </div>
@@ -298,18 +312,22 @@
       <div class="container">
         <div class="categories-content">
           <div class="section-head">
-            <h2 class="section-title">
+            <h2 class="section-title" data-sal="slide-down">
               <img src="images/icons/title.svg" />
               قطاعات الخمري
             </h2>
-            <p class="section-summary">
+            <p
+              class="section-summary"
+              data-sal="slide-down"
+              style="--sal-delay: 0.2s"
+            >
               شركة الخمري تعمل في مجموعة متنوعة من القطاعات بما في ذلك الفنادق
               والحج والعمرة، وتسعى دائمًا لتقديم خدمات مميزة لعملائها في المملكة
               العربية السعودية.
             </p>
           </div>
           <div class="categories-list">
-            <div class="category-item">
+            <div class="category-item" data-sal="slide-up">
               <a
                 href="categorySingle.html"
                 class="category-img loading-img lazy-img-parent"
@@ -324,7 +342,11 @@
                 الحج والعمرة
               </p>
             </div>
-            <div class="category-item">
+            <div
+              class="category-item"
+              data-sal="slide-up"
+              style="--sal-delay: 0.15s"
+            >
               <a
                 href="categorySingle.html"
                 class="category-img loading-img lazy-img-parent"
@@ -339,7 +361,11 @@
                 العربية السعودية
               </p>
             </div>
-            <div class="category-item">
+            <div
+              class="category-item"
+              data-sal="slide-up"
+              style="--sal-delay: 0.3s"
+            >
               <a
                 href="categorySingle.html"
                 class="category-img loading-img lazy-img-parent"
@@ -357,7 +383,7 @@
               </p>
             </div>
           </div>
-          <div class="section-more">
+          <div class="section-more" data-sal="slide-down">
             <a href="#!" class="main-btn more-btn"> مشاهدة المزيد </a>
           </div>
         </div>
@@ -373,11 +399,15 @@
       <div class="container">
         <div class="services-content">
           <div class="section-head">
-            <h2 class="section-title">
+            <h2 class="section-title" data-sal="slide-down">
               <img src="images/icons/title.svg" />
               خدمات الخمري
             </h2>
-            <p class="section-summary">
+            <p
+              class="section-summary"
+              data-sal="slide-down"
+              style="--sal-delay: 0.2s"
+            >
               شركة الخمري تعمل في مجموعة متنوعة من الخدمات بما في ذلك الفنادق
               والحج والعمرة، وتسعى دائمًا لتقديم خدمات مميزة لعملائها في المملكة
               العربية السعودية.
@@ -421,7 +451,7 @@
               </a>
             </div>
           </div>
-          <div class="section-more">
+          <div class="section-more" data-sal="slide-down">
             <a href="#!" class="main-btn more-btn"> مشاهدة المزيد </a>
           </div>
         </div>
@@ -437,7 +467,7 @@
       <div class="container">
         <div class="certificates-content">
           <div class="section-head">
-            <h2 class="section-title">
+            <h2 class="section-title" data-sal="slide-down">
               <img src="images/icons/title.svg" />
               الشهادات والدروع
             </h2>
@@ -549,7 +579,7 @@
       <div class="container">
         <div class="news-content">
           <div class="section-head">
-            <h2 class="section-title">
+            <h2 class="section-title" data-sal="slide-down">
               <img src="images/icons/title.svg" />
               الأخبار
             </h2>
@@ -672,7 +702,7 @@
       <div class="container">
         <div class="gallery-content">
           <div class="section-head">
-            <h2 class="section-title">
+            <h2 class="section-title" data-sal="slide-down">
               <img src="images/icons/title.svg" />
               مكتبة الصور والفيديوهات
             </h2>
@@ -778,16 +808,20 @@
         <div class="contact-content">
           <div class="contact-text">
             <div class="section-head">
-              <h2 class="section-title">
+              <h2 class="section-title" data-sal="slide-down">
                 <img src="images/icons/title.svg" />
                 اتصل بنا
               </h2>
             </div>
-            <h3 class="contact-title">
+            <h3
+              class="contact-title"
+              data-sal="slide-down"
+              style="--sal-delay: 0.2s"
+            >
               نسعد بتواصلكم معنا، وسنقوم بالرد عليكم في أقرب وقت.
             </h3>
             <div class="contact-methods">
-              <div class="contact-method">
+              <div class="contact-method" data-sal="flip-up">
                 <div class="method-icon">
                   <img src="images/icons/call.svg" />
                 </div>
@@ -798,7 +832,11 @@
                   </strong>
                 </div>
               </div>
-              <div class="contact-method">
+              <div
+                class="contact-method"
+                data-sal="flip-up"
+                style="--sal-delay: 0.15s"
+              >
                 <div class="method-icon">
                   <img src="images/icons/mail.svg" />
                 </div>
@@ -811,7 +849,11 @@
                   </strong>
                 </div>
               </div>
-              <div class="contact-method">
+              <div
+                class="contact-method"
+                data-sal="flip-up"
+                style="--sal-delay: 0.3s"
+              >
                 <div class="method-icon">
                   <img src="images/icons/location.svg" />
                 </div>
@@ -822,7 +864,11 @@
                   </strong>
                 </div>
               </div>
-              <div class="contact-method">
+              <div
+                class="contact-method"
+                data-sal="flip-up"
+                style="--sal-delay: 0.45s"
+              >
                 <div class="method-icon">
                   <img src="images/icons/time.svg" />
                 </div>
@@ -836,7 +882,7 @@
               </div>
             </div>
           </div>
-          <div class="contact-map">
+          <div class="contact-map" data-sal="zoom-in">
             <div id="map">
               <img src="images/map.jpg" />
             </div>
@@ -850,7 +896,7 @@
     <footer style="background-image: url(images/background/footer.jpg)">
       <div class="container">
         <div class="footer">
-          <div class="footer-info">
+          <div class="footer-info" data-sal="slide-down">
             <div class="footer-logo">
               <img src="images/logo-footer.svg" class="img-fluid" />
             </div>
@@ -860,7 +906,11 @@
               العربية السعودية
             </p>
           </div>
-          <div class="footer-nav">
+          <div
+            class="footer-nav"
+            data-sal="slide-down"
+            style="--sal-delay: 0.15s"
+          >
             <h3 class="footer-title">
               <img src="images/icons/footer.svg" />
               روابط سريعة
@@ -880,7 +930,11 @@
               </li>
             </ul>
           </div>
-          <div class="footer-nav">
+          <div
+            class="footer-nav"
+            data-sal="slide-down"
+            style="--sal-delay: 0.3s"
+          >
             <h3 class="footer-title">
               <img src="images/icons/footer.svg" />
               خدمات الخمري
@@ -900,7 +954,11 @@
               </li>
             </ul>
           </div>
-          <div class="footer-nav">
+          <div
+            class="footer-nav"
+            data-sal="slide-down"
+            style="--sal-delay: 0.45s"
+          >
             <h3 class="footer-title">
               <img src="images/icons/footer.svg" />
               قطاعات الخمري
@@ -952,6 +1010,7 @@
     <script src="js/fancybox.umd.js"></script>
     <script src="js/svg.js"></script>
     <script src="js/lazyload.js"></script>
+    <script src="js/sal.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

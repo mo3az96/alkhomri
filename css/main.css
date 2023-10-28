@@ -1,3 +1,7 @@
+:root {
+  --sal-duration: 1s;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -138,7 +142,7 @@ html {
 }
 .swiper-tools .swiper-pagination .swiper-pagination-bullet {
   margin: 0;
-  background-color: #3C8951;
+  background-color: #3c8951;
   opacity: 0.3;
   height: 8px;
   width: 24px;
@@ -156,20 +160,20 @@ html {
 .swiper-tools .swiper-btn {
   width: 56px;
   height: 56px;
-  border: 2px solid #3C8951;
+  border: 2px solid #3c8951;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  fill: #3C8951;
+  fill: #3c8951;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   transition-property: fill, background-color;
 }
 .swiper-tools .swiper-btn:hover {
   fill: #fff;
-  background-color: #3C8951;
+  background-color: #3c8951;
 }
 @media (max-width: 767px) {
   .swiper-tools .swiper-btn {
@@ -189,7 +193,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #3C8951;
+  background-color: #3c8951;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -292,7 +296,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   }
 }
 .main-slide .slide-subtitle {
-  color: #5EDC81;
+  color: #5edc81;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.4583334;
@@ -390,7 +394,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
 
 .about-title {
   font-size: 32px;
-  color: #1D1F1F;
+  color: #1d1f1f;
   font-weight: 700;
   line-height: 1.09375;
   margin: 0;
@@ -516,7 +520,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   text-align: center;
   font-size: 24px;
   font-weight: 700;
-  color: #1D1F1F;
+  color: #1d1f1f;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -532,7 +536,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   }
 }
 .category-item .category-name a {
-  color: #1D1F1F;
+  color: #1d1f1f;
   transition: all 0.3s ease-in-out;
 }
 .category-item .category-name a:hover {
@@ -624,7 +628,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   transform: scale(1.1) rotate(2.5deg);
 }
 .service-item:hover .service-name {
-  color: #5EDC81;
+  color: #5edc81;
 }
 
 .certificate-slide {
@@ -743,7 +747,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
 .news-item .news-name {
   font-size: 20px;
   font-weight: 700;
-  color: #1D1F1F;
+  color: #1d1f1f;
   line-height: 1.6;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -759,7 +763,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   }
 }
 .news-item .news-name a {
-  color: #1D1F1F;
+  color: #1d1f1f;
   transition: color 0.3s ease-in-out;
 }
 .news-item .news-name a:hover {
@@ -912,7 +916,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
 .contact-method .value {
   font-size: 16px;
   font-weight: 700;
-  color: #1D1F1F;
+  color: #1d1f1f;
   display: block;
   text-align: right;
   line-height: 1.875;
@@ -921,11 +925,11 @@ html[dir=ltr] .contact-method .value {
   text-align: left;
 }
 .contact-method .value a {
-  color: #1D1F1F;
+  color: #1d1f1f;
   transition: all 0.3s ease-in-out;
 }
 .contact-method .value a:hover {
-  color: #3C8951;
+  color: #3c8951;
 }
 .contact-method .en {
   direction: ltr;
@@ -1118,7 +1122,7 @@ header {
   transition: all 0.3s ease-in-out;
 }
 .header-contact .contact-value:hover {
-  color: #3C8951;
+  color: #3c8951;
 }
 
 .lang-content {
@@ -1129,7 +1133,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1D1F1F;
+  color: #1d1f1f;
   fill: #000;
   transition: all 0.3s ease-in-out;
 }
@@ -1179,8 +1183,8 @@ header {
   color: #004185;
 }
 .lang-content:hover .lang-btn {
-  color: #3C8951;
-  fill: #3C8951;
+  color: #3c8951;
+  fill: #3c8951;
 }
 .lang-content:hover .lang-list {
   visibility: visible;
@@ -1195,12 +1199,12 @@ header {
   display: none;
   align-items: center;
   justify-content: center;
-  stroke: #1D1F1F;
+  stroke: #1d1f1f;
   margin: 40px 0 0;
   transition: all 0.3s ease-in-out;
 }
 .menu-btn:hover {
-  stroke: #3C8951;
+  stroke: #3c8951;
 }
 @media (max-width: 993px) {
   .menu-btn {
@@ -1268,8 +1272,8 @@ header {
   margin-inline-start: 7px;
 }
 .list-link:hover {
-  color: #5EDC81;
-  fill: #5EDC81;
+  color: #5edc81;
+  fill: #5edc81;
 }
 
 .nav-sublist {
@@ -1304,8 +1308,8 @@ header {
 }
 
 .has-children:hover .list-link {
-  color: #5EDC81;
-  fill: #5EDC81;
+  color: #5edc81;
+  fill: #5edc81;
 }
 .has-children:hover .nav-sublist {
   visibility: visible;
@@ -1352,7 +1356,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #1D1F1F;
+  fill: #1d1f1f;
   opacity: 0.5;
   text-decoration: none;
   transition: clor 0.3s ease-in-out;
@@ -1415,14 +1419,14 @@ header {
   .list-link {
     width: 100%;
     display: flex;
-    color: #1D1F1F;
-    fill: #1D1F1F;
+    color: #1d1f1f;
+    fill: #1d1f1f;
     justify-content: space-between;
     font-size: 16px;
     font-weight: 500;
   }
   .list-link .arrow {
-    fill: #1D1F1F;
+    fill: #1d1f1f;
     transition: all 0.3s ease-in-out;
   }
   .list-link.active {
@@ -1518,7 +1522,7 @@ header {
   justify-content: center;
   flex-direction: column;
   font-size: 36px;
-  color: #1D1F1F;
+  color: #1d1f1f;
   font-weight: 700;
   line-height: 1.222223;
   margin: 0;
@@ -1999,5 +2003,5 @@ html[dir=ltr] .footer-list a:hover {
 }
 .social:hover {
   background-color: #fff;
-  color: #3C8951;
+  color: #3c8951;
 }/*# sourceMappingURL=main.css.map */

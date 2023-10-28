@@ -3,6 +3,16 @@ $(window).on("load", function () {
 });
 
 $(document).ready(function () {
+  if ($(window).width() >= 991) {
+    sal({
+      once: true,
+    });
+  } else {
+    sal({
+      disabled: true,
+    });
+  }
+
   lazyLoad();
   mobileClick();
   $(window).on("resize", function () {
