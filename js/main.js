@@ -100,19 +100,26 @@ $(document).ready(function () {
 function mobileClick() {
   /************************************ Side Menu ************************************/
   if ($(window).width() <= 993) {
-    $(".menu-btn").on("click", () => {
+    $(".menu-btn").on("click", (e) => {
+      if (e.isDefaultPrevented()) return;
+      e.preventDefault();
+      e.stopPropagation();
       $(".overlay").fadeIn(500);
       $(".header-nav").addClass("active");
       $("body").addClass("overflow");
     });
 
-    $(".close-menu,.overlay").on("click", () => {
+    $(".close-menu,.overlay").on("click", (e) => {
+      if (e.isDefaultPrevented()) return;
+      e.preventDefault();
+      e.stopPropagation();
       $(".overlay").fadeOut(500);
       $(".header-nav").removeClass("active");
       $("body").removeClass("overflow");
     });
 
     $(".has-children>a").click(function (e) {
+      if (e.isDefaultPrevented()) return;
       e.preventDefault();
       e.stopPropagation();
       $(".has-children>a").not(this).removeClass("active");
@@ -125,21 +132,32 @@ function mobileClick() {
       $(".has-children>a").not(this).siblings().slideUp(500);
     });
     $(".lang-btn").click(function (e) {
+      if (e.isDefaultPrevented()) return;
+      e.preventDefault();
+      e.stopPropagation();
       $(this).toggleClass("active");
       $(this).siblings().slideToggle(500);
     });
+  } else {
+    $(".menu-btn,.close-menu,.overlay,.has-children>a,.lang-btn").off("click");
+    $("body").removeClass("overflow");
   }
   /************************************ Footer ************************************/
   if ($(window).width() <= 767) {
-    $(" .footer-title").click(function () {
-      $(" .footer-title").not(this).removeClass("active");
+    $(".footer-title").click(function (e) {
+      if (e.isDefaultPrevented()) return;
+      e.preventDefault();
+      e.stopPropagation();
+      $(".footer-title").not(this).removeClass("active");
       $(this).toggleClass("active");
       if ($(this).siblings().css("display") == "none") {
         $(this).siblings().slideDown(500);
       } else {
         $(this).siblings().slideUp(500);
       }
-      $(" .footer-title").not(this).siblings().slideUp(500);
+      $(".footer-title").not(this).siblings().slideUp(500);
     });
+  } else {
+    $(".footer-title").off("click");
   }
 }
