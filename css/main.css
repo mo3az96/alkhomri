@@ -88,7 +88,6 @@ body {
   position: relative;
   font-family: ping;
   font-weight: normal;
-  padding-bottom: 1000px;
 }
 body::-webkit-scrollbar {
   background-color: #fff;
