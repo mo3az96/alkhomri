@@ -26,6 +26,9 @@ $(document).ready(function () {
     },
     spaceBetween: 10,
     loop: true,
+    a11y: {
+      enabled: false,
+    },
     // autoplay: {
     //   delay: 5000,
     // },
@@ -47,6 +50,9 @@ $(document).ready(function () {
   /************************************ Certificates Slider ************************************/
   var certificatesSwiper = new Swiper(".certificates-slider .swiper", {
     loop: true,
+    a11y: {
+      enabled: false,
+    },
     centeredSlides: true,
     breakpoints: {
       0: {
@@ -78,8 +84,9 @@ $(document).ready(function () {
   });
   /************************************ Gallery Sliders ************************************/
   var gallerySwiper = new Swiper(".gallery-slider .swiper", {
-    loop: true,
-    centeredSlides: true,
+    a11y: {
+      enabled: false,
+    },
     navigation: {
       nextEl: ".gallery-slider .swiper-btn-next",
       prevEl: ".gallery-slider .swiper-btn-prev",
@@ -90,12 +97,57 @@ $(document).ready(function () {
     },
     breakpoints: {
       0: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        loop: true,
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        loop: true,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+      },
+      1199: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+  /************************************ Videos Sliders ************************************/
+  var videosSwiper = new Swiper(".videos-slider .swiper", {
+    loop: true,
+    a11y: {
+      enabled: false,
+    },
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".videos-slider .swiper-btn-next",
+      prevEl: ".videos-slider .swiper-btn-prev",
+    },
+    pagination: {
+      el: ".videos-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
         slidesPerView: 1.5,
         spaceBetween: 10,
       },
       767: {
         spaceBetween: 30,
-
         slidesPerView: "auto",
       },
     },
