@@ -234,6 +234,12 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   content: "\e61b";
 }
 
+@media (max-width: 993px) {
+  .page-content {
+    padding-top: 50px;
+  }
+}
+
 .main-slider {
   position: relative;
   overflow: hidden;
@@ -1844,6 +1850,11 @@ header {
   height: 100%;
   background: linear-gradient(74.5deg, rgba(32, 158, 89, 0.8) 0.45%, rgba(16, 112, 111, 0.9) 50.22%, #004185 100%);
 }
+@media (max-width: 993px) {
+  .breadcrumb-section {
+    display: none;
+  }
+}
 
 .page-title {
   position: relative;
@@ -2729,4 +2740,89 @@ html[dir=ltr] .about-section .pattern {
 .page-content .services-section .services-content {
   position: relative;
   z-index: 2;
+}
+
+@media (max-width: 993px) {
+  .page-content.service-page {
+    padding: 0;
+  }
+}
+
+.servicePage-cover {
+  position: relative;
+  aspect-ratio: 1512/759;
+}
+.servicePage-cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.servicePage-cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 65, 133, 0.1) 0%, rgba(0, 65, 133, 0.9) 100%);
+}
+
+.servicePage-content {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 90px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 993px) {
+  .servicePage-content {
+    padding: 35px 0 50px;
+  }
+}
+.servicePage-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.95;
+}
+.servicePage-content .section-head {
+  position: relative;
+  z-index: 2;
+}
+.servicePage-content .service-description {
+  position: relative;
+  z-index: 2;
+  border: 4px solid #004185;
+  padding: 30px 35px;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+  font-size: 18px;
+  color: #444444;
+  line-height: 1.88888889;
+}
+@media (max-width: 993px) {
+  .servicePage-content .service-description {
+    font-size: 16px;
+    padding: 25px 15px;
+  }
+}
+.servicePage-content .service-description p {
+  font-size: 18px;
+  color: #444444;
+  line-height: 1.88888889;
+  margin: 0;
+}
+@media (max-width: 993px) {
+  .servicePage-content .service-description p {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=main.css.map */
