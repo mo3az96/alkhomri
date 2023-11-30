@@ -157,6 +157,40 @@ $(document).ready(function () {
       },
     },
   });
+  /************************************ Categories Sliders ************************************/
+  var categoriesSwiper = new Swiper(".categories-slider .swiper", {
+    loop: true,
+    a11y: {
+      enabled: false,
+    },
+    pagination: {
+      el: ".categories-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      1199: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
 
   /************************************ States Counter ************************************/
   if ($(".statistics-list").length > 0) {
@@ -186,6 +220,21 @@ $(document).ready(function () {
       }
     });
   }
+
+  /************************************ Video ************************************/
+  $(".cover-overlay").on("click", (e) => {
+    $(".cover-overlay").fadeOut();
+    $(".categoryPage-cover video").trigger("play");
+  });
+
+  $(".categoryPage-cover video").on({
+    play: function () {
+      $(".cover-overlay").fadeOut();
+    },
+    pause: function () {
+      $(".cover-overlay").fadeIn();
+    },
+  });
 });
 
 function mobileClick() {
