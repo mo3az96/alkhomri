@@ -786,6 +786,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
 @media (max-width: 1199px) {
   .news-row {
     grid-template-columns: 1fr 1fr;
+    gap: 22px 10px;
   }
 }
 @media (max-width: 993px) {
@@ -795,20 +796,11 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   }
 }
 
-.ralated-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-}
-@media (max-width: 1199px) {
+@media (min-width: 1200px) {
   .ralated-list {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 993px) {
-  .ralated-list {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 30px;
   }
 }
 
@@ -3506,6 +3498,10 @@ html[dir=ltr] .about-section .pattern {
   margin-bottom: 0;
 }
 
+.post-related {
+  max-width: 100%;
+  overflow: hidden;
+}
 .post-related .related-title {
   font-size: 24px;
   line-height: 1.5;
@@ -3519,4 +3515,12 @@ html[dir=ltr] .about-section .pattern {
 .post-related .related-title img {
   width: 47px;
   margin-inline-end: 15px;
+}
+.post-related .swiper-tools {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .post-related .swiper-tools {
+    display: flex;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -235,6 +235,35 @@ $(document).ready(function () {
       $(".cover-overlay").fadeIn();
     },
   });
+
+  /************************************ Related Swiper ************************************/
+  if ($(window).width() <= 1199) {
+    var relatedSwiper = new Swiper(".post-related .swiper", {
+      loop: true,
+      a11y: {
+        enabled: false,
+      },
+      pagination: {
+        el: ".post-related .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+      },
+      on: {
+        init: function (swiper) {
+          lazyLoad();
+        },
+      },
+    });
+  }
 });
 
 function mobileClick() {
