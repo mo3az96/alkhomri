@@ -200,8 +200,12 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
 }
 
 .main-btn {
-  width: 170px;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 170px;
+  padding: 0 28px;
   height: 64px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1019607843);
   border-end-end-radius: 30px;
   border-start-start-radius: 30px;
   display: flex;
@@ -209,12 +213,17 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   justify-content: center;
   background-color: #3c8951;
   color: #fff;
+  fill: #fff;
   font-size: 18px;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
 }
+.main-btn svg {
+  margin-inline-start: 15px;
+}
 .main-btn:hover {
   color: #fff;
+  fill: #fff;
   background-color: #004185;
 }
 
@@ -769,6 +778,23 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   }
 }
 
+.news-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .news-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 993px) {
+  .news-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
 .news-item {
   display: flex;
   align-items: center;
@@ -778,7 +804,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  border: 2px solid #EEEEEE;
+  border: 2px solid #eeeeee;
 }
 @media (max-width: 767px) {
   .news-item {
@@ -786,12 +812,14 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
     max-width: 370px;
     margin: auto;
     flex-direction: column;
-    border: 2px solid #eeeeee;
+    padding: 15px;
+    border: none;
+    border-bottom: 6px solid #004185;
   }
 }
 .news-item .news-img {
   width: 38.695%;
-  aspect-ratio: 170/129;
+  aspect-ratio: 170/133;
   display: block;
   overflow: hidden;
   border-radius: 10px;
@@ -824,7 +852,12 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 5px;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .news-item .news-numbers {
+    margin-bottom: 5px;
+  }
 }
 .news-item .number {
   display: flex;
@@ -836,6 +869,17 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
 }
 .news-item .number img {
   margin-inline-end: 7px;
+}
+.news-item .news-category {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2.285714;
+  display: inline-flex;
+  color: #004185;
+  transition: all 0.3s ease-in-out;
+}
+.news-item .news-category:hover {
+  color: #5edc81;
 }
 .news-item .news-name {
   font-size: 20px;
@@ -863,23 +907,42 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   color: #004185;
 }
 @media (min-width: 1200px) {
-  .news-item:first-of-type {
+  .news-grid .news-item:first-of-type {
     grid-row: 1/3 span;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 25px;
   }
-  .news-item:first-of-type .news-img {
+  .news-grid .news-item:first-of-type .news-img {
     aspect-ratio: 616/391;
     width: 100%;
     border-radius: 20px;
   }
-  .news-item:first-of-type .news-summary {
+  .news-grid .news-item:first-of-type .news-summary {
     padding: 36px 5px 0;
   }
-  .news-item:first-of-type .news-numbers {
-    margin-bottom: 20px;
+  .news-grid .news-item:first-of-type .news-numbers {
+    margin-bottom: 10px;
+  }
+  .news-row .news-item {
+    flex-direction: column;
+    border: none;
+    border-bottom: 6px solid #004185;
+    padding: 15px;
+  }
+  .news-row .news-item .news-img {
+    width: 100%;
+    aspect-ratio: 340/221;
+  }
+  .news-row .news-item .news-summary {
+    padding: 30px 0 18px;
+  }
+  .news-row .news-item .news-numbers {
+    margin-bottom: 10px;
+  }
+  .news-row .news-item .news-category {
+    margin-bottom: 7px;
   }
 }
 
@@ -2461,11 +2524,12 @@ html[dir=ltr] .footer-list a:hover {
 .filter-content {
   display: flex;
   align-items: center;
+  margin-inline-start: auto;
 }
 @media (max-width: 767px) {
   .filter-content {
     width: 100%;
-    margin-top: 15px;
+    margin: 15px 0 0;
   }
 }
 .filter-content .filter-label {
@@ -3238,5 +3302,14 @@ html[dir=ltr] .about-section .pattern {
 @media (max-width: 993px) {
   .servicePage-content .service-description p {
     font-size: 16px;
+  }
+}
+
+.news-page .news-section {
+  padding: 40px 0 53px;
+}
+@media (max-width: 993px) {
+  .news-page .news-section {
+    padding: 30px 0 30px;
   }
 }/*# sourceMappingURL=main.css.map */
