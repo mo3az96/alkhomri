@@ -2388,7 +2388,7 @@ footer:after {
   transition: all 0.3s ease-in-out;
 }
 .footer-list a:hover {
-  color: #00af6c;
+  color: #15D98E;
   transform: translateX(-5px);
 }
 html[dir=ltr] .footer-list a:hover {
@@ -3559,4 +3559,48 @@ html[dir=ltr] .about-section .pattern {
 }
 .contact-page .contact-methods .contact-method:nth-of-type(n + 3) {
   grid-column: unset;
+}
+
+.certificates-page .certificates-section:nth-of-type(odd) {
+  padding: 64px 0 60px;
+  background-color: #fff;
+}
+.certificates-page .certificates-section:nth-of-type(odd)::after {
+  display: none;
+}
+@media (max-width: 993px) {
+  .certificates-page .certificates-section:nth-of-type(odd) {
+    padding: 32px 0 30px;
+  }
+}
+.certificates-page .certificates-section:nth-of-type(even) {
+  padding: 64px 0 96px;
+}
+@media (max-width: 993px) {
+  .certificates-page .certificates-section:nth-of-type(even) {
+    padding: 32px 0 40px;
+  }
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+@media (max-width: 1199px) {
+  .certificates-grid {
+    gap: 15px;
+  }
+}
+@media (max-width: 993px) {
+  .certificates-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 }/*# sourceMappingURL=main.css.map */
