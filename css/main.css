@@ -1433,6 +1433,11 @@ html[dir=ltr] .contact-method .value {
 .map-branch .branch-info {
   padding-inline: 15px;
 }
+@media (max-width: 767px) {
+  .map-branch .branch-info {
+    padding: 5px 5px 0;
+  }
+}
 .map-branch span {
   display: block;
   font-size: 12px;
@@ -3523,4 +3528,35 @@ html[dir=ltr] .about-section .pattern {
   .post-related .swiper-tools {
     display: flex;
   }
+}
+
+.contact-page .contactForm-section {
+  padding: 47px 0 60px;
+  background-color: #fbfbfb;
+}
+@media (max-width: 993px) {
+  .contact-page .contactForm-section {
+    padding: 30px 0 40px;
+  }
+}
+.contact-page .contactForm-section:after {
+  display: none;
+}
+.contact-page .contact-informations {
+  padding-inline-start: 15px;
+  gap: 15px;
+}
+.contact-page .contact-methods {
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid #eeeeee;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.contact-page .contact-methods .contact-method {
+  border: none;
+  border-radius: 0;
+}
+.contact-page .contact-methods .contact-method:nth-of-type(n + 3) {
+  grid-column: unset;
 }/*# sourceMappingURL=main.css.map */
