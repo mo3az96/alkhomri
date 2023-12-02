@@ -97,18 +97,20 @@ $(document).ready(function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 2,
+        centeredSlides: true,
+        slidesPerView: 1.5,
         spaceBetween: 10,
         loop: true,
       },
       767: {
-        slidesPerView: 3,
-        spaceBetween: 15,
+        slidesPerView: 2,
+        spaceBetween: 30,
         loop: true,
+        centeredSlides: false,
       },
       992: {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 15,
         loop: true,
       },
       1199: {
