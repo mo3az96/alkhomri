@@ -1,5 +1,8 @@
 $(window).on("load", function () {
-  $("body").removeClass("overflow");
+  $(".preloader").fadeOut("500", function () {
+    $(this).remove();
+    $("body").removeClass("overflow");
+  });
 });
 
 $(document).ready(function () {
@@ -233,7 +236,7 @@ $(document).ready(function () {
   $("video").on({
     play: function () {
       $(this).parent(".video-content").siblings(".cover-overlay").fadeOut();
-    }
+    },
   });
 
   /************************************ Related Swiper ************************************/
