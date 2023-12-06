@@ -528,6 +528,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
 .categories-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
   gap: 40px 30px;
 }
 @media (max-width: 1199px) {
@@ -543,11 +544,12 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
 }
 
 .category-item {
-  padding: 20px 37px 45px;
+  padding: 20px 37px 20px;
   border-radius: 15px;
   border: 1px solid #a5a5a5;
   border-bottom: 6px solid #004185;
   background-color: #f7f7f7;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1199px) {
   .category-item {
@@ -590,18 +592,12 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   overflow: hidden;
   padding: 0 15px;
   margin: 0 0 16px;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1199px) {
   .category-item .category-name {
     padding: 0;
   }
-}
-.category-item .category-name a {
-  color: #1d1f1f;
-  transition: all 0.3s ease-in-out;
-}
-.category-item .category-name a:hover {
-  color: #004185;
 }
 .category-item .category-summary {
   color: #444444;
@@ -615,8 +611,44 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   overflow: hidden;
   line-height: 1.66666667;
   margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.category-item .category-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3c8951;
+  fill: #3c8951;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.category-item .category-more svg {
+  margin-inline-start: 15px;
+}
+html[dir=ltr] .category-item .category-more svg {
+  transform: scaleX(-1);
+}
+.category-item:hover {
+  border-bottom-color: #3c8951;
+  padding-bottom: 30px;
+}
+.category-item:hover .category-name {
+  color: #3c8951;
+}
+.category-item:hover .category-summary {
+  margin-bottom: 16px;
+}
+.category-item:hover .category-more {
+  max-height: 50px;
 }
 .categories-slider .category-item .category-summary {
+  display: none;
+}
+.categories-slider .category-item .category-more {
   display: none;
 }
 @media (min-width: 1200px) {
@@ -637,6 +669,9 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
     height: 74px;
     padding: 0 30px;
     margin: 0;
+  }
+  .categories-slider .category-item:hover {
+    border-bottom-color: #3c8951;
   }
 }
 
