@@ -803,7 +803,8 @@ html[dir=ltr] .category-item .category-more svg {
 .news-grid {
   display: grid;
   grid-template-columns: 7fr 5fr;
-  gap: 22px 10px;
+  align-items: flex-start;
+  gap: 15px;
 }
 @media (max-width: 1199px) {
   .news-grid {
@@ -846,8 +847,7 @@ html[dir=ltr] .category-item .category-more svg {
 .news-item {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 20px;
+  padding: 15px;
   background-color: #fff;
   border-radius: 20px;
   position: relative;
@@ -867,7 +867,7 @@ html[dir=ltr] .category-item .category-more svg {
 }
 .news-item .news-img {
   width: 38.695%;
-  aspect-ratio: 170/133;
+  aspect-ratio: 173/131;
   display: block;
   overflow: hidden;
   border-radius: 10px;
@@ -960,18 +960,23 @@ html[dir=ltr] .category-item .category-more svg {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 25px;
+    padding: 20px;
   }
   .news-grid .news-item:first-of-type .news-img {
-    aspect-ratio: 616/391;
+    aspect-ratio: 616/349;
     width: 100%;
+    height: auto;
     border-radius: 20px;
   }
   .news-grid .news-item:first-of-type .news-summary {
-    padding: 36px 5px 0;
+    padding: 25px 5px 0;
   }
   .news-grid .news-item:first-of-type .news-numbers {
     margin-bottom: 10px;
+  }
+  .news-grid .news-item:first-of-type .news-name {
+    height: auto;
+    -webkit-line-clamp: 1;
   }
   .news-row .news-item {
     flex-direction: column;
