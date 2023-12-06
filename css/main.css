@@ -3516,6 +3516,7 @@ html[dir=ltr] .about-section .pattern {
   background-color: #fff;
   border-radius: 15px;
   padding: 55px 40px 15px;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 993px) {
   .feature-item {
@@ -3532,15 +3533,17 @@ html[dir=ltr] .about-section .pattern {
   justify-content: center;
   margin-bottom: 35px;
 }
-.feature-item .feature-icon img {
+.feature-item .feature-icon svg {
   max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  fill: #004185;
+  transition: all 0.3s ease-in-out;
 }
 .feature-item .feature-title {
   font-size: 34px;
   font-weight: 700;
-  color: #004185;
+  color: #1d1f1f;
   line-height: 1.0298;
   text-align: center;
   margin: 0 0 15px;
@@ -3552,6 +3555,12 @@ html[dir=ltr] .about-section .pattern {
   line-height: 1.667;
   text-align: center;
   margin: 0;
+}
+.feature-item:hover {
+  border-bottom-color: #3c8951;
+}
+.feature-item:hover .feature-icon svg {
+  fill: #3c8951;
 }
 
 .page-content .categories-section {
