@@ -1250,6 +1250,30 @@ html[dir=ltr] .category-item .category-more svg {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-in-out;
+}
+.contact-method:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(60, 137, 81, 0.35) 0%, rgba(60, 137, 81, 0) 80%);
+  transition: all 0.3s ease-in-out;
+}
+.contact-method:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 10px -10px rgba(60, 137, 81, 0.5);
+}
+.contact-method:hover::before {
+  opacity: 1;
+  transform: translateY(5px);
 }
 @media (max-width: 767px) {
   .contact-method {
