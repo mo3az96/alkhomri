@@ -2451,7 +2451,10 @@ header {
   justify-content: flex-start;
   display: none;
   gap: 10px;
-  margin: 15px;
+  background-color: #fff;
+  margin: 15px -15px;
+  padding: 10px 15px 0;
+  border-top: 15px solid #fbfbfb;
 }
 .nav-content .header-contact img {
   width: 45px;
@@ -2571,8 +2574,7 @@ header {
   justify-content: space-between;
   padding: 15px;
   background-color: #fff;
-  width: 330px;
-  max-width: 95%;
+  width: 100%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0509803922);
 }
 .nav-head .nav-logo {
@@ -4131,6 +4133,12 @@ html[dir=ltr] .about-section .pattern {
 }
 .contact-page .contact-methods .contact-method:nth-of-type(n + 3) {
   grid-column: unset;
+}
+.contact-page .contact-methods .contact-method::before {
+  display: none;
+}
+.contact-page .contact-methods .contact-method:hover {
+  transform: none;
 }
 
 .certificates-page .certificates-section:nth-of-type(odd) {
