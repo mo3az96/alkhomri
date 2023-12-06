@@ -355,10 +355,17 @@ $(document).ready(function () {
       },
     },
   });
-  const myvideos1 = document.getElementById('videos1')
-  myvideos1.addEventListener('hide.bs.modal', event => {
+  const myvideos1 = document.getElementById("videos1");
+  myvideos1.addEventListener("hide.bs.modal", (event) => {
     $(".video-content").find("video").trigger("pause");
-  })
+  });
+  /************************************ Select2 ************************************/
+  if ($(window).width() >= 992) {
+    $("select").select2({
+      minimumResultsForSearch: Infinity,
+      width: "100%",
+    });
+  }
 });
 
 function mobileClick() {
