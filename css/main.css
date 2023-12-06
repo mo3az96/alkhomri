@@ -391,6 +391,10 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   width: 161px;
   height: 56px;
 }
+.main-slide .slide-btn:hover {
+  background-color: #fff;
+  color: #004185;
+}
 @media (max-width: 993px) {
   .main-slide .slide-btn {
     margin: auto;
@@ -722,7 +726,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   transform: scale(1.1) rotate(2.5deg);
 }
 .service-item:hover .service-name {
-  color: #5edc81;
+  color: #3c8951;
 }
 .services-grid .service-item {
   aspect-ratio: 570/380;
@@ -888,7 +892,7 @@ html[dir=ltr] .swiper-tools .swiper-btn svg {
   transition: all 0.3s ease-in-out;
 }
 .news-item .news-category:hover {
-  color: #5edc81;
+  color: #3c8951;
 }
 .news-item .news-name {
   font-size: 20px;
@@ -2254,35 +2258,34 @@ header {
   margin-inline-start: 7px;
 }
 .list-link:hover {
-  color: #5edc81;
-  fill: #5edc81;
+  color: #3c8951;
+  fill: #3c8951;
 }
 
 .nav-sublist {
   position: absolute;
-  inset-inline-start: -25px;
+  inset-inline-start: 0;
   top: 100%;
-  border-end-end-radius: 15px;
-  border-start-start-radius: 15px;
+  border-radius: 16px;
   background-color: #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0509803922);
-  min-width: 215px;
-  padding: 13px 0 19px;
+  min-width: 200px;
+  padding: 0;
   z-index: 5;
+  overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s ease-in-out;
-  transition-property: visibility, opacity;
-}
-.nav-sublist li {
-  padding: 0 24px;
-}
-.nav-sublist li ~ li {
-  margin: 6px 0 0;
+  transition: all 0.3s ease-in-out;
 }
 .nav-sublist li a {
-  font-size: 16px;
-  color: #444444;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-inline-start: 12px;
+  border-inline-start: 4px solid transparent;
+  color: #1d1f1f;
   white-space: nowrap;
   transition: all 0.3s ease-in-out;
 }
@@ -2292,12 +2295,14 @@ header {
   }
 }
 .nav-sublist li a:hover {
-  color: #004185;
+  color: #3c8951;
+  border-color: #3c8951;
+  background-color: rgba(60, 137, 81, 0.1);
 }
 
 .has-children:hover .list-link {
-  color: #5edc81;
-  fill: #5edc81;
+  color: #3c8951;
+  fill: #3c8951;
 }
 .has-children:hover .nav-sublist {
   visibility: visible;
@@ -2444,11 +2449,8 @@ header {
     transition: none;
     display: none;
   }
-  .nav-sublist li {
-    padding: 10px 0 0;
-  }
-  .nav-sublist li ~ li {
-    margin: 0;
+  .nav-sublist a {
+    border: none;
   }
   .lang-content {
     margin: 0;
