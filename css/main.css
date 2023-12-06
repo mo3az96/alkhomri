@@ -1379,7 +1379,6 @@ html[dir=ltr] .contact-method .value {
 }
 
 .contactForm-section {
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 80px 0;
@@ -2232,6 +2231,22 @@ header {
   right: 0;
   z-index: 9;
 }
+header:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 130px;
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.0509803922);
+  background-color: transparent;
+  display: none;
+}
+@media (max-width: 993px) {
+  header:after {
+    display: block;
+  }
+}
 
 .header {
   display: flex;
@@ -2243,6 +2258,8 @@ header {
     padding: 15px 0 0;
     justify-content: space-between;
     align-items: flex-start;
+    position: relative;
+    z-index: 3;
   }
 }
 
@@ -2802,7 +2819,6 @@ header {
 }
 
 footer {
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2816,7 +2832,7 @@ footer:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(74.5deg, rgba(32, 158, 89, 0.95) 0.45%, rgba(0, 65, 133, 0.95) 100%);
+  background: linear-gradient(74.5deg, rgba(32, 158, 89, 0.9) 0.45%, rgba(0, 65, 133, 0.9) 100%);
 }
 
 .footer {
@@ -2947,7 +2963,7 @@ footer:after {
   transition: all 0.3s ease-in-out;
 }
 .footer-list a:hover {
-  color: #15D98E;
+  color: #15d98e;
   transform: translateX(-5px);
 }
 html[dir=ltr] .footer-list a:hover {
@@ -3306,7 +3322,7 @@ html[dir=ltr] .about-section .pattern {
   width: 100%;
   overflow: hidden;
   background-color: #fff;
-  background-position: bottom;
+  background-position-y: 120px;
   background-position-x: center;
 }
 @media (max-width: 993px) {
@@ -3332,7 +3348,7 @@ html[dir=ltr] .about-section .pattern {
 }
 
 .videos-section {
-  padding: 80px 0 103px;
+  padding: 100px 0 103px;
   background-color: #fff;
   position: relative;
   overflow: hidden;
@@ -3348,7 +3364,7 @@ html[dir=ltr] .about-section .pattern {
   transform: translateX(-50%);
 }
 .videos-section .pattern.top {
-  top: 0;
+  top: 30px;
 }
 .videos-section .pattern.bottom {
   bottom: 50px;
@@ -3373,6 +3389,7 @@ html[dir=ltr] .about-section .pattern {
   position: relative;
   width: 100%;
   overflow: hidden;
+  background-position-y: 50px;
   background-position-x: center;
   background-color: #fbfbfb;
 }
@@ -3639,6 +3656,7 @@ html[dir=ltr] .about-section .pattern {
   position: relative;
   aspect-ratio: 1512/650;
   display: flex;
+  width: 100%;
 }
 .categoryPage-cover .video-content {
   width: 100%;
@@ -3672,6 +3690,12 @@ html[dir=ltr] .about-section .pattern {
   height: 100%;
   background: linear-gradient(74.5deg, rgba(90, 160, 203, 0.8) 0.45%, rgba(14, 104, 114, 0.7013) 58%, rgba(0, 65, 133, 0.9) 100%);
 }
+.categoryPage-cover .cover-overlay img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .categoryPage-cover .cover-overlay span {
   position: absolute;
   top: 50%;
@@ -3681,6 +3705,12 @@ html[dir=ltr] .about-section .pattern {
   width: 58px;
   height: 58px;
   border-radius: 50%;
+}
+@media (max-width: 993px) {
+  .categoryPage-cover {
+    height: 500px;
+    aspect-ratio: unset;
+  }
 }
 
 .categoryPage-main {
