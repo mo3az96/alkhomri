@@ -233,10 +233,7 @@ $(document).ready(function () {
   $("video").on({
     play: function () {
       $(this).parent(".video-content").siblings(".cover-overlay").fadeOut();
-    },
-    pause: function () {
-      $(this).parent(".video-content").siblings(".cover-overlay").fadeIn();
-    },
+    }
   });
 
   /************************************ Related Swiper ************************************/
