@@ -226,19 +226,6 @@ $(document).ready(function () {
       }
     });
   }
-
-  /************************************ Video ************************************/
-  $(".cover-overlay").click(function (e) {
-    $(this).fadeOut();
-    $(this).siblings(".video-content").find("video").trigger("play");
-  });
-
-  $("video").on({
-    play: function () {
-      $(this).parent(".video-content").siblings(".cover-overlay").fadeOut();
-    },
-  });
-
   /************************************ Related Swiper ************************************/
   if ($(window).width() <= 1199) {
     var relatedSwiper = new Swiper(".post-related .swiper", {
@@ -355,12 +342,26 @@ $(document).ready(function () {
       },
     },
   });
+  mainVideosSwiper.on("slideChange", function () {
+    $(".swiper video").trigger("pause");
+  });
   if ($(".video-content").length > 0) {
     const myvideos1 = document.getElementById("videos1");
     myvideos1.addEventListener("hide.bs.modal", (event) => {
       $(".video-content").find("video").trigger("pause");
     });
   }
+  /************************************ Video ************************************/
+  $(".cover-overlay").click(function (e) {
+    $(this).fadeOut();
+    $(this).siblings(".video-content").find("video").trigger("play");
+  });
+
+  $("video").on({
+    play: function () {
+      $(this).parent(".video-content").siblings(".cover-overlay").fadeOut();
+    },
+  });
   /************************************ Select2 ************************************/
   if ($(window).width() >= 992) {
     $("select").select2({
