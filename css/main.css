@@ -1196,7 +1196,7 @@ html[dir=ltr] .category-item .category-more svg {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 17px 17px 0;
   z-index: 3;
   visibility: hidden;
@@ -1215,6 +1215,9 @@ html[dir=ltr] .category-item .category-more svg {
 .video-item .video-statistics span svg {
   fill: #fff;
   margin-inline-start: 5px;
+}
+.video-item .gallery-statistics {
+  justify-content: flex-end;
 }
 .video-item .video-name {
   position: absolute;
