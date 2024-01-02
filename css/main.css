@@ -4351,4 +4351,8 @@ html[dir=ltr] .about-section .pattern {
     max-width: 370px;
     margin: 0 auto;
   }
+}
+
+.nav-sublist li a {
+  padding-inline-end: 15px;
 }/*# sourceMappingURL=main.css.map */
